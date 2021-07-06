@@ -35,3 +35,32 @@ State 는 object 이고 컴포넌트의 데이터를 넣을 공간이고 이 데
 컴포넌트 안에서 사용하려면 {this.state.이름} 식으로 사용
 state 의 데이터를 변화시키기 위해 더하기, 뺴기 함수를 생성하고 onClick 을 사용해서 함수를 불러옴
 onClick={this.함수}
+
+3-1
+state 의 값을 직접 바꾸게되면 오류가나고 작동하지 않음 대신에 setState 를 사용하면 가능함
+state 에 있는 값을 업데이트하고 render 를 실행하는데 오직 바뀐 부분만 부분적으로 똑똑하게 업데이트
+
+안녕하세요. 궁금한 점이 잇어서 댓글 남깁니다.
+this.setState( current => ({count: current.count -1 })); 에서 왜
+this.setState( current => {count: current.count -1 }); 로 작성하면 오류가 날까요?
+
+{count: current.count -1}를 감싸고 있는 () 소괄호의 역할이 무엇인가요?
+return을 다음과 같이 써주어도 마찬가지로 오류가 납니다.
+this.setState( current => {return count: current.count +1});
+
+()를 쓴다면 () => {} 에서 (current) => 이렇게로 사용해주거나, 아니면 return에서 JSX 문법을 사용할때 여러 line일 경우를 대비해 ()를 사용해주는 것 {return (count: current.count +1)}으로 알고 있었는데... 왜 => 다음에 ()를 사용해주어야 하는 걸까요?
+
+번외로
+this.setState( current => {return current.count += 1});
+얘는 왜 => () 를 사용해주지 않아도 작동하는 걸까요?
+
+==>>>>
+
+안녕하세요 implicit return과 관련하여 궁금하실 분들을 위해 알고있는 내에서 설명을 덧 붙여봅니다.
+
+화살표 함수를 통해 함수를 나타낸 경우
+() => {} 형식을 띄게 되는데요,
+뒤의 {} 부분이 return 할 대상으로 표현되는 경우가 많습니다.
+만일 return 시에 객체를 반환할 경우(위와같이)
+js는 이게 return 을 나타내기위한 {} 인지, 아니면 객체를 나타내기 위한 {} 인지 잘 모르기 때문에 둘을 구분하기 위해
+객체를 반환하는 경우 ({}) 를 사용하는 것으로 알고 있고, 번외의 질문에서는 {} 안에 return 키워드가 사용되었으니 ()가 없어도 잘 실행이 되겠지요 :)
