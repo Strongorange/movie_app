@@ -21,3 +21,7 @@ App.js 에 Food 컴포넌트를 만들고 App() 에서 불러옴
 그냥 텍스트를 쓰면 텍스트 {} 안에 쓰면 JS
 Object 가 있다면 .map 을 사용해서 사용가능
 return 하고 () 으로 HTML 여러줄을 사용가능
+
+2-4 PropTypes 를 이용해서 PropType을 확인 가능
+Food 컴포넌트에 Food.propTypes = {} 을 이용해서 Food 컴포넌트의 인자들의 자료형을 지정해주면 다른 자료형이 들어왔을시 확인 가능
+이름은 반드시 .propTypes 로 해야 리액트가 확인
