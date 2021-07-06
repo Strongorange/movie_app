@@ -64,3 +64,15 @@ this.setState( current => {return current.count += 1});
 만일 return 시에 객체를 반환할 경우(위와같이)
 js는 이게 return 을 나타내기위한 {} 인지, 아니면 객체를 나타내기 위한 {} 인지 잘 모르기 때문에 둘을 구분하기 위해
 객체를 반환하는 경우 ({}) 를 사용하는 것으로 알고 있고, 번외의 질문에서는 {} 안에 return 키워드가 사용되었으니 ()가 없어도 잘 실행이 되겠지요 :)
+
+3-2 Component Life Cycle
+https://reactjs.org/docs/react-component.html
+
+Mounting => 컴포넌트가 태어나는 것
+constructor 가 실행되고 render 가 실행되고 componentDidMount 가 실행됨
+
+Updating
+render 가 실행되고 componentDidUpdate 가 실행
+
+Unmounting => 페이지를 바꿔서 컴포넌트가 죽을때
+componentWillUnmount 를 실행
