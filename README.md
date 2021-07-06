@@ -25,3 +25,13 @@ return 하고 () 으로 HTML 여러줄을 사용가능
 2-4 PropTypes 를 이용해서 PropType을 확인 가능
 Food 컴포넌트에 Food.propTypes = {} 을 이용해서 Food 컴포넌트의 인자들의 자료형을 지정해주면 다른 자료형이 들어왔을시 확인 가능
 이름은 반드시 .propTypes 로 해야 리액트가 확인
+
+3-0 State
+2 장에서 App 은 function 컴포넌트
+클래스 컴포넌트를 만들어 봄
+class App extends React.Component {}
+클래스 컴포넌트는 return 하지 않고 render 함!!!!!!!! => render() {} 안에 return 은 가능함
+State 는 object 이고 컴포넌트의 데이터를 넣을 공간이고 이 데이터는 변하는 데이터 => 변하는 데이터를 담는게 사용 이유
+컴포넌트 안에서 사용하려면 {this.state.이름} 식으로 사용
+state 의 데이터를 변화시키기 위해 더하기, 뺴기 함수를 생성하고 onClick 을 사용해서 함수를 불러옴
+onClick={this.함수}
