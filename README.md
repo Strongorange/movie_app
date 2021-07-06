@@ -76,3 +76,8 @@ render 가 실행되고 componentDidUpdate 가 실행
 
 Unmounting => 페이지를 바꿔서 컴포넌트가 죽을때
 componentWillUnmount 를 실행
+
+3-3
+Life Cyle 을 이해하고 사용
+componentDidMount 는 컴포넌트가 mount 되자마자 호출 됨 => 타이머를 사용해서 6초후에 완료라고 표시
+=> 실전에서는 API 에 FETCH 를 보내고 데이터를 가져오면 데이터를 보여줌
