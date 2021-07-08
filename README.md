@@ -16,11 +16,12 @@ App.js 에 Food 컴포넌트를 만들고 App() 에서 불러옴
 <Food fav="kimchi"> 라는 예시로 컴포넌트에 값을 전달하고
 {fav} 를 인자부분에 사용해서 props 안의 fav 를 꺼내고 함수내에서 {fav} 로 사용가능
 
-2-2,3
+2-2,3 Map
 웹사이트에 동적 데이터를 추가하는 방법
 그냥 텍스트를 쓰면 텍스트 {} 안에 쓰면 JS
 Object 가 있다면 .map 을 사용해서 사용가능
 return 하고 () 으로 HTML 여러줄을 사용가능
+map 에 있는 각각 item 은 key 가 필요
 
 2-4 PropTypes 를 이용해서 PropType을 확인 가능
 Food 컴포넌트에 Food.propTypes = {} 을 이용해서 Food 컴포넌트의 인자들의 자료형을 지정해주면 다른 자료형이 들어왔을시 확인 가능
@@ -105,3 +106,12 @@ render 안에서 state 에 안에있는 movies 를 추가로 선언해두고 mov
 홈페이지에 타이틀 요약 년도 포스터가 나오게 만듬
 style={{}} 처럼 {{}} 으로 css 사용가능함 근데 별로임!
 CSS 파일을 만들어서 가능
+
+4-3 Add Genres
+Movie 에 장르 arrayOf(PropTypes.string) 을 추가해줌!
+
+JSX 는 HTML 처럼 보이지만 어쨌든 JS 임 JS 에서 CLASS 는 CLASS APP EXTENDS..... 같은게 CLASS
+HTML 의 CLASS 를 지정해줄때는 CLASSNAME 을 사용
+Movie.js 컴포넌트에 장르를 추가
+map 에 있는 각가 item 은 key 가 필요
+map 은 현재의 item 과 item number 를 반환함 해당값을 key 로 보내서 에러 해결
