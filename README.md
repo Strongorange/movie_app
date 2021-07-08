@@ -158,3 +158,41 @@ a, href 대신에 Link 와 to 를 사용
 Link 는 Router 안에서만 작동함
 
 HashRouter 이외에도 Brower Router 가 존재하는데 gh-pages 에서 설정하기가 복잡해서 해쉬 라우터 사용
+
+6-3
+라우터의 라우트 들은 props 를 가짐 console 로 확인시 history, location, match, static~~ props 를 가지고 이것들을 사용가능
+영화를 클릭시 정보를 about 페이지로 보내서 사용가능
+https://reactrouter.com/web/api/Link/to-object
+to 를 단순 주소가 아닌 객체로도 보낼 수 있음
+
+<Link
+  to={{
+    pathname: "/courses",
+    search: "?sort=name",
+    hash: "#the-hash",
+    state: { fromDashboard: true }
+  }}
+/>
+
+네비게이션이 라우트로 정보를 보내고 라우트는 props 인자로 받음
+state 에서 fromNavigation:true 로 보낸것이 About 라우트 props.location.state 에서 그대로 확인 가능
+Detail 라우트를 만들고 Movie.js 에 Link 를 생성해 클릭하면 /movie-detial 로 이동하고 state에 모든 props 를 같이 보냄
+props.location.state 에 모든 정보들이 있고 이것을 사용가능!
+
+6-4
+영화를 클릭하지 않고 /movie-detail 을 쳐서 들어가면 state 가 undefined 라고 콘솔에 출력
+Detail 을 class 컴포넌트로 바꾸고 componentDidMount() 에서 location.state 를 콘솔하면 정상이나 위와 같은 증상
+해서 location.state 가 undefined 면 홈으로 리다이렉트 시킴
+props 의 history.push("/") 으로 가능!
+
+render() 가 실행되고 componentDidMount() 가 실행되기때문에 render() 에서 location 이 없는 경우에 오류발생
+
+location, history 같은 props 를 사용가능한 것은 Route component 이기 때문!
+<Navigation />
+<Route path="/" exact={true} component={Home} />
+<Route path="/about" exact={true} component={About} />
+<Route path="/movie-detail" exact={true} component={Detail} />
+
+Navigation 은 Route 가 아니라 history, location 같은 props 가 없음
+
+clonetube 에서 한 것 같이 /movie/:id 로 넣고 pathname 에서 id 를 넣어주면 변수로도 가능
