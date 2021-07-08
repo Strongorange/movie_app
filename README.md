@@ -151,3 +151,10 @@ Route 에는 2가지 props 가 들어감
     에서 /home/intro 에서는 둘 다 표시됨 => 겹치는 url 을 모두 표시
 
    요걸 방자하기 위해서 exact={true} 를 해주면 오직 정확히 매치하는 url 에 해당되는 컴포넌트만 불러옴
+
+6-2
+Navigation 컴포넌트를 만들고 실행하보면 링크를 누르면 새로고침을 시켜버려 컴포넌트를 죽이고 다시 시작하고 /about 로 이동하지 않음
+a, href 대신에 Link 와 to 를 사용
+Link 는 Router 안에서만 작동함
+
+HashRouter 이외에도 Brower Router 가 존재하는데 gh-pages 에서 설정하기가 복잡해서 해쉬 라우터 사용
