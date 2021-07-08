@@ -81,3 +81,16 @@ componentWillUnmount 를 실행
 Life Cyle 을 이해하고 사용
 componentDidMount 는 컴포넌트가 mount 되자마자 호출 됨 => 타이머를 사용해서 6초후에 완료라고 표시
 => 실전에서는 API 에 FETCH 를 보내고 데이터를 가져오면 데이터를 보여줌
+
+4-0 Axios
+fetch 보다 나은 방법이 존재 axios 를 사용
+axios ==>> fetch 위에 있는 작은 레이어
+
+YTS API 사용
+https://yts.mx/api
+=> https://yts.mx/api/v2/list_movies.json 에서 MOVIES 리스트 배열을 얻을 수 있음
+YTS 는 불법 토렌트 그룹이여서 URL 이 계속 변하는데 NOMAD CODER 의 PROXY 를 사용해서 해결
+https://yts-proxy.now.sh/list_movies.json
+getMovies async 함수를 만들고 axios 에서 얻어온 데이터를 movies 로 저장
+
+컴포넌트를 불러온 후 render 가 실행되고 DidMount 를 실행해서 데이터를 가져옴
