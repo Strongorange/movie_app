@@ -100,3 +100,8 @@ ES6 를 사용해서 movies 를 가져오고 movies 를 state 에 넣을것 => s
 Movie.js 를 만드는데 state 가 필요없어 class 컴포넌트로 만들필요 없음 => function 컴포넌트로 하고 propTypes 사용
 App 에서 ?sort_by=rating 사용해서 점수순으로 정렬
 render 안에서 state 에 안에있는 movies 를 추가로 선언해두고 movies 에 map 을 사용함 => map 은 반드시 return 이 존재해야!
+
+4-2
+홈페이지에 타이틀 요약 년도 포스터가 나오게 만듬
+style={{}} 처럼 {{}} 으로 css 사용가능함 근데 별로임!
+CSS 파일을 만들어서 가능
