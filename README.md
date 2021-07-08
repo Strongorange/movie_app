@@ -130,3 +130,24 @@ npm run build 를 하면 압축된 build 폴더가 생김
 6-0 네비게이션 만들기
 react-router-dom 설치
 component 폴더에 Movie 들을 routes 폴더에 about 과 home js 를 만듬
+react-router-dom 중에서 HashRouter , Route 를 임포트
+Route 에는 2가지 props 가 들어감
+
+1. 렌더링할 스크린
+
+2. 뭘할지 정해줌
+   <Route path="/about" component={About} /> 내가 /about 으로 가면 About 컴포넌트를 보여줘
+   그런데
+   <Route path="/about" component={About} />
+   <Route path="/home" component={Home} />
+   처럼 2개가 있다면 "/" 에서 두 컴포넌트가 동시에 표현되서 화면이 이상해짐
+
+    <Route path="/home">
+        <h1>Home</h1>
+      </Route>
+      <Route path="/home/intro">
+        <h1>intro</h1>
+      </Route>
+    에서 /home/intro 에서는 둘 다 표시됨 => 겹치는 url 을 모두 표시
+
+   요걸 방자하기 위해서 exact={true} 를 해주면 오직 정확히 매치하는 url 에 해당되는 컴포넌트만 불러옴
