@@ -126,3 +126,7 @@ homepage 를 반드시 넣어줘야함!!!
 npm run build 를 하면 압축된 build 폴더가 생김
 "deploy": "gh-pages -d build" 스크립트를 추가함 // -d 는 directory 의 약자 => build 폴더를 올린다는 뜻
 "predeploy": "npm run build" 를 추가하면 npm run deploy 를 하면 predeploy 를 먼저 하고 deploy 함 똑띠
+
+6-0 네비게이션 만들기
+react-router-dom 설치
+component 폴더에 Movie 들을 routes 폴더에 about 과 home js 를 만듬
