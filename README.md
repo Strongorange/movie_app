@@ -94,3 +94,9 @@ https://yts-proxy.now.sh/list_movies.json
 getMovies async 함수를 만들고 axios 에서 얻어온 데이터를 movies 로 저장
 
 컴포넌트를 불러온 후 render 가 실행되고 DidMount 를 실행해서 데이터를 가져옴
+
+4-1 Rendering Movies
+ES6 를 사용해서 movies 를 가져오고 movies 를 state 에 넣을것 => setState
+Movie.js 를 만드는데 state 가 필요없어 class 컴포넌트로 만들필요 없음 => function 컴포넌트로 하고 propTypes 사용
+App 에서 ?sort_by=rating 사용해서 점수순으로 정렬
+render 안에서 state 에 안에있는 movies 를 추가로 선언해두고 movies 에 map 을 사용함 => map 은 반드시 return 이 존재해야!
