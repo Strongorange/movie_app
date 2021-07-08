@@ -115,3 +115,6 @@ HTML 의 CLASS 를 지정해줄때는 CLASSNAME 을 사용
 Movie.js 컴포넌트에 장르를 추가
 map 에 있는 각가 item 은 key 가 필요
 map 은 현재의 item 과 item number 를 반환함 해당값을 key 로 보내서 에러 해결
+
+4-5 Cutting the summary
+.slice 를 이용해서 설명을 좀 잘라줌
