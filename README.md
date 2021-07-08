@@ -118,3 +118,11 @@ map 은 현재의 item 과 item number 를 반환함 해당값을 key 로 보내
 
 4-5 Cutting the summary
 .slice 를 이용해서 설명을 좀 잘라줌
+
+5-0 gh-pages
+gh-pages 모듈로 gh-pages 에 업로드, npm i gh-pages
+package.json 을 설정
+homepage 를 반드시 넣어줘야함!!!
+npm run build 를 하면 압축된 build 폴더가 생김
+"deploy": "gh-pages -d build" 스크립트를 추가함 // -d 는 directory 의 약자 => build 폴더를 올린다는 뜻
+"predeploy": "npm run build" 를 추가하면 npm run deploy 를 하면 predeploy 를 먼저 하고 deploy 함 똑띠
